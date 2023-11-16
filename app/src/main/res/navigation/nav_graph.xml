@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login_fragment">
+    <fragment
+        android:id="@+id/empty_fragment"
+        android:name="com.wafflestudio.assignment4.EmptyFragment"
+        android:label="empty_fragment"
+        tools:layout="@layout/empty_fragment" >
+        <action
+            android:id="@+id/action_empty_fragment_to_login_fragment"
+            app:popUpTo="@+id/empty_fragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/login_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.wafflestudio.assignment4.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_login_fragment_to_empty_fragment"
+            app:popUpTo="@+id/login_fragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/empty_fragment" />
+    </fragment>
+</navigation>
